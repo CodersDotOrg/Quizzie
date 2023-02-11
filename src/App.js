@@ -3,6 +3,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Body from './components/Body';
 import Home from './components/Home';
+import { useState } from 'react';
+// import QuizState from './context/quizState';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   const obj={
@@ -26,18 +31,25 @@ function App() {
     "regions": [],
     "isNiche": false
 };
+  const quizInitial = [];
+  const [quiz, setQuiz] = useState(quizInitial);
 
 const obj2=[...obj.incorrectAnswers, obj.correctAnswer];
 obj2.sort();
 
   return (
-    <div className="App">
-      <Header />
-      {/* <Body obj={obj} obj2={obj2}/>
-       */}
-       <Home/>
-      <Footer/>
-    </div>
+    <Router>
+          <Header/>
+          <div className="App">
+            <Routes>
+              <Route exact path="/" element={<Home quiz={{quiz, setQuiz}}/>} />
+              <Route exact path="/quiz" element={<Body obj={obj} obj2={obj2}/>} />
+            </Routes>
+          </div>
+          
+          <Footer/>
+        </Router>
+    
   );
 }
 
