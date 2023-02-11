@@ -1,0 +1,95 @@
+[
+    {
+        "category": "Sport & Leisure",
+        "id": "62417d780f96c4efe8d773ca",
+        "correctAnswer": "Orlando Magic",
+        "incorrectAnswers": [
+            "Orlando Colts",
+            "Orlando Timbers",
+            "Orlando Raptors"
+        ],
+        "question": "Which of these is a basketball team based in Orlando?",
+        "tags": [
+            "basketball",
+            "nba",
+            "usa",
+            "sport"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "hard",
+        "regions": [],
+        "isNiche": false
+    },
+    {
+        "category": "Film & TV",
+        "id": "625740a89da29df7b05f73ee",
+        "correctAnswer": "Gone with the Wind",
+        "incorrectAnswers": [
+            "Downfall",
+            "My Neighbour Totoro",
+            "Up"
+        ],
+        "question": "Name the movie that matches the following plot summary: 'The daughter of a plantation owner conducts a romance with a roguish profiteer.'",
+        "tags": [
+            "film"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "medium",
+        "regions": [],
+        "isNiche": false
+    },
+    {
+        "category": "Arts & Literature",
+        "id": "622a1c397cc59eab6f950f3a",
+        "correctAnswer": "J. R. R. Tolkien",
+        "incorrectAnswers": [
+            "G. K. Chesterton",
+            "Philip Pullman",
+            "C. S. Lewis"
+        ],
+        "question": "Which author wrote 'The History of Middle-earth'?",
+        "tags": [
+            "arts_and_literature"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "easy",
+        "regions": [],
+        "isNiche": false
+    },
+    {
+        "category": "Food & Drink",
+        "id": "622a1c367cc59eab6f950250",
+        "correctAnswer": "Cherry ",
+        "incorrectAnswers": [
+            "Plum",
+            "Apple",
+            "Orange"
+        ],
+        "question": "Which fruit goes into the liqueur Kirsch?",
+        "tags": [
+            "food_and_drink"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "hard",
+        "regions": [],
+        "isNiche": false
+    },
+    {
+        "category": "Science",
+        "id": "622a1c377cc59eab6f95046e",
+        "correctAnswer": "hair and scalp",
+        "incorrectAnswers": [
+            "angels",
+            "the ecology of plant communities",
+            "sleep"
+        ],
+        "question": "What is Trichology the study of?",
+        "tags": [
+            "science"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "hard",
+        "regions": [],
+        "isNiche": false
+    }
+]
