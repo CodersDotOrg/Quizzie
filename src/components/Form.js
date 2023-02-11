@@ -1,21 +1,21 @@
 import React from 'react'
 
-const Form = () => {
+const Form = (props) => {
   return (
     
     <>
         <div className="container my-5">
             <h1>Quizzie</h1>
-        <form>
+        <form onSubmit={props.onSubmit}>
             <div className="container">
                 Select The Category
                 <div className="mb-3">
                     <label htmlFor="science" className="form-label">Science</label>
-                    <input type="checkbox"  id="science"/>
+                    <input type="checkbox" value="science"  id="science"/>
                     <label htmlFor="history" className="form-label">History</label>
-                    <input type="checkbox"  id="history"/>
+                    <input type="checkbox" value="history"  id="history"/>
                     <label htmlFor="sports" className="form-label">Sports</label>
-                    <input type="checkbox"  id="sports"/>
+                    <input type="checkbox" value="sports"  id="sports"/>
                 </div>
             </div>
             <div className="container">
@@ -32,8 +32,7 @@ const Form = () => {
             <div className="container">
                 Select The Difficulty Level
                 <div className="mb-3">
-                    div.
-                    <label htmlFor="easy" className="form-label">Easy</label>
+                    <label htmlFor="easy"  className="form-label">Easy</label>
                     <input type="radio" value="easy" name="level" required="required"/>
                     <label htmlFor="medium" className="form-label">Medium</label>
                     <input type="radio" value="medium" name="level" required="required"/>
