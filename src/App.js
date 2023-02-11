@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Body from './components/Body';
+import Home from './components/Home';
 
 function App() {
   const obj={
@@ -32,7 +33,9 @@ obj2.sort();
   return (
     <div className="App">
       <Header />
-      <Body obj={obj} obj2={obj2}/>
+      {/* <Body obj={obj} obj2={obj2}/>
+       */}
+       <Home/>
       <Footer/>
     </div>
   );
