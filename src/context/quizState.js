@@ -2,7 +2,7 @@
 import { useState } from "react";
 import quizContext from "./quizContext";
 
-const quizState = (props) => {
+const QuizState = (props) => {
   const quizInitial = [];
   const [quiz, setQuiz] = useState(quizInitial);
 
@@ -16,15 +16,16 @@ const quizState = (props) => {
       });
       const json =  await response.json();
       console.log(json);
-      
+      await setQuiz(json);
+      console.log(quiz);
   }
 
   return (
     <quizContext.Provider
-      value={{}}>
-      {props.children}
+      value={{quiz,getQuiz}}>
+      
     </quizContext.Provider>
   );
 };
 
-export default quizState;
+export default QuizState;

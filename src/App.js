@@ -3,8 +3,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Body from './components/Body';
 import Home from './components/Home';
-import Parent from './components/Parent';
-import UseEffectAPI from './tp/UseEffectAPI';
+import { useState } from 'react';
+import QuizState from './context/quizState';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   const obj = [{
@@ -27,44 +30,27 @@ function App() {
     "difficulty": "hard",
     "regions": [],
     "isNiche": false
-  },{
-    "category": "History",
-    "id": "622a1c377cc59eab6f950429",
-    "correctAnswer": "Three Mile Island",
-    "incorrectAnswers": [
-      "Chernobyl",
-      "Fukushima",
-      "Jaslovské Bohunice"
-    ],
-    "question": "In March 1979, where did a major nuclear accident occur?",
-    "tags": [
-      "history"
-    ],
-    "type": "Multiple Choice",
-    "difficulty": "hard",
-    "regions": [],
-    "isNiche": false
   }];
+  const quizInitial = [];
+  const [quiz, setQuiz] = useState(quizInitial);
 
   const obj2 = [...obj[0].incorrectAnswers, obj[0].correctAnswer];
   obj2.sort();
-  
+
   const curr = 0;
   return (
-    <div className="App">
+    <Router>
       <Header />
-      {/* <Body obj={obj[0]} obj2={obj2}/> */}
-      
-      {/* <Home /> */}
-      {/* <Parent quiz={obj} curr={curr}/>
-      <Footer /> */}
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Home quiz={{ quiz, setQuiz }} />} />
+          <Route exact path="/quiz" element={<Body obj={obj} obj2={obj2} />} />
+        </Routes>
+      </div>
 
+      <Footer />
+    </Router>
 
-
-
-      {/* different method to fetch api data */}
-      <UseEffectAPI/>
-    </div>
   );
 }
 

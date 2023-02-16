@@ -11,11 +11,11 @@ const Form = (props) => {
                 Select The Category
                 <div className="mb-3">
                     <label htmlFor="science" className="form-label">Science</label>
-                    <input type="checkbox" value="science"  id="science"/>
+                    <input type="checkbox" name='category' value="science"  id="science"/>
                     <label htmlFor="history" className="form-label">History</label>
-                    <input type="checkbox" value="history"  id="history"/>
+                    <input type="checkbox" name='category' value="history"  id="history"/>
                     <label htmlFor="sports" className="form-label">Sports</label>
-                    <input type="checkbox" value="sports"  id="sports"/>
+                    <input type="checkbox" name='category' value="sports"  id="sports"/>
                 </div>
             </div>
             <div className="container">
