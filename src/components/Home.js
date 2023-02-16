@@ -12,11 +12,7 @@ export default function Home() {
 
   return (
     <>
-<<<<<<< HEAD
       <Form onSubmit={onSubmit}/>
-=======
-      <Form />
->>>>>>> ca8416649977eaefe601d8df6212a0034d0387b1
     </>
   )
 }

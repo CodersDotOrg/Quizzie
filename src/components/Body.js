@@ -8,7 +8,7 @@ export default function Body(props) {
 
     function onsubmit(e) {
         e.preventDefault();
-        
+        props.curr++;
         console.log('submitted');
     }
     return (
@@ -33,7 +33,7 @@ export default function Body(props) {
                                 <Option opt={props.obj2[3]} ind={4}/>
                             </div>
                         </div>
-                        <button className='btn btn-success btn-lg btn-block mt-3'>Submit</button>
+                        {/* <button className='btn btn-success btn-lg btn-block mt-3'>Submit</button> */}
                     </form>
                 </div>
             </div>
